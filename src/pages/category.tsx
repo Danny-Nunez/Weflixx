@@ -37,7 +37,7 @@ const CategoryPage = ({ filters }: CategoryPageProps) => {
     getApiUrl,
     async (apiURL: string) => {
       const { data } = await axiosClient.get(apiURL);
-      return data.results;
+      return data;
     },
     { revalidateFirstPage: false, fallbackData: [] }
   );
@@ -77,9 +77,9 @@ const CategoryPage = ({ filters }: CategoryPageProps) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const { data } = await axiosClient.get(`/api/category`, { params: query });
+  const { data } = await axiosClient.get(`/api/filter`, { params: query });
   return {
-    props: { filters: data.filters }
+    props: { filters: data }
   };
 };
 
