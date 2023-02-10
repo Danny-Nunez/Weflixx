@@ -14,7 +14,7 @@ interface HomeBannerProps {
 const stylesSwiper = {
   borderRadius: "8px",
   overflow: "hidden",
-  backgroundColor: "#333"
+  backgroundColor: "#1a1a1a"
 };
 
 const HomeBanner = ({ banners }: HomeBannerProps) => {

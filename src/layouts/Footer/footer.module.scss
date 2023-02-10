@@ -1,8 +1,9 @@
 .footer {
-  padding: 30px 0 20px;
+  padding: 20px 0 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  font-size: 12px;
   gap: 6px 0;
   @media screen and (max-width: 767.98px) {
     flex-direction: column;
@@ -10,7 +11,7 @@
 }
 .footerContact {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 12px;
   a {
     color: white;

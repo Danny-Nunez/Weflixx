@@ -1,8 +1,8 @@
 {
-  "name": "netfilm",
-  "version": "0.1.0",
-  "repository": "https://github.com/lamhoang1256/netfilm",
-  "author": "Nguyen Hoang Lam",
+  "name": "WeFlixx",
+  "version": "0.2.0",
+  "repository": "https://github.com/Danny-Nunez/weflixxv2",
+  "author": "Danny Nunez",
   "license": "MIT",
   "private": true,
   "scripts": {

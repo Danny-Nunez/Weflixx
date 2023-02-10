@@ -26,7 +26,7 @@ const Header = () => {
       <div className="container">
         <nav className={styles.navbar}>
           <div className={styles.left}>
-            <WrapLink className={styles.logo}>Netfilm</WrapLink>
+            <WrapLink className={styles.logo}>WeFlixx</WrapLink>
             <ul className={classNames(styles.menu, "menu-hidden")} ref={menuRef}>
               {links.map((link) => (
                 <li key={link.path}>

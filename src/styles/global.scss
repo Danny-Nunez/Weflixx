@@ -1,17 +1,17 @@
 :root {
-  --dark: #080f28;
-  --purple: #995aff;
+  --dark: #000000;
+  --purple: #f00303;
   --gray33: #333;
   --purplec4: #c4c1ea;
-  --dark43: #434b5a;
-  --gradient-purple: linear-gradient(270deg, #c042ff, #8a3cff);
+  --dark43: #5a4343;
+  --gradient-purple: linear-gradient(270deg, #ff0000, #8a3cff);
 }
 html {
   font-size: 62.5%;
 }
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #080f28;
+  background-color: #000000;
   color: white;
   font-size: 1.6rem;
   &::-webkit-scrollbar {
@@ -21,7 +21,7 @@ body {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
   &::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+    background-image: linear-gradient(-45deg, #ff0000, #d66efd);
     border-radius: 50px;
   }
 }
@@ -39,7 +39,7 @@ body {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
   &::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+    background-image: linear-gradient(-45deg, #ff0000, #d66efd);
     border-radius: 50px;
   }
 }
@@ -172,6 +172,6 @@ body {
   color: white;
   font-weight: 500;
   border-radius: 6px;
-  border: 1px solid #8a3cff;
+  border: 1px solid #972626;
   background-color: var(--purple);
 }
