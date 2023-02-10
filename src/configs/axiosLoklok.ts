@@ -5,8 +5,8 @@ const axiosLoklok = axios.create({
   baseURL: process.env.NEXT_PUBLIC_BASE_URL_API,
   headers: {
     lang: "en",
-    versioncode: "11",
-    clienttype: "ios_jike_default",
+    versioncode: "32",
+    clienttype: "android_tem3",
     deviceid: randomDeviceId(16),
     "user-agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.109 Safari/537.36 OPR/84.0.4316.52"
@@ -19,8 +19,8 @@ axiosLoklok.interceptors.request.use(
       ...config,
       headers: {
         lang: "en",
-        versioncode: "11",
-        clienttype: "ios_jike_default",
+        versioncode: "32",
+        clienttype: "android_tem3",
         deviceid: randomDeviceId(16),
         sign: randomDeviceId(32),
         "user-agent":
