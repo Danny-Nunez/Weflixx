@@ -1,0 +1,18 @@
+.categories {
+  display: flex;
+  gap: 14px 10px;
+  margin: 10px 0;
+  overflow-x: auto;
+}
+.category {
+  height: 31px;
+  line-height: 31px;
+  padding: 0 12px;
+  background-color: #434b5a;
+  color: white;
+  border-radius: 14px;
+  transition: all 0.25s linear;
+}
+.category:hover {
+  background-color: var(--purple);
+}

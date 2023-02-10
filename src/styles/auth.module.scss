@@ -1,0 +1,107 @@
+.section {
+  min-height: 100vh;
+  padding: 14px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url("/background-auth.png");
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+}
+.heading {
+  font-size: 2.4rem;
+}
+.container {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  padding: 50px 60px;
+  background-color: var(--dark);
+  border-radius: 10px;
+  z-index: 2;
+}
+.main {
+  margin-top: 30px;
+}
+.button {
+  position: relative;
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  line-height: 2.4rem;
+  font-weight: 600;
+  margin: 7px 0;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+    transform: translateY(-50%);
+  }
+}
+.buttonLarge {
+  color: white;
+  font-weight: 700;
+  border-radius: 6px;
+  border: 1px solid #8a3cff;
+  background-image: var(--gradient-purple);
+}
+.other {
+  margin: 7px 0;
+  text-align: center;
+}
+.other span {
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    border: 1px solid #9692c7;
+    width: 88px;
+  }
+  &::before {
+    left: 30px;
+  }
+  &:after {
+    right: 30px;
+  }
+}
+.email {
+  color: white;
+  background-image: var(--gradient-purple);
+}
+.facebook {
+  color: white;
+  background-color: #404eed;
+}
+.google {
+  background-color: white;
+}
+.alreadyAccount {
+  padding-top: 20px;
+  text-align: center;
+  a {
+    color: blue;
+  }
+}
+.forgot {
+  padding-top: 10px;
+  color: var(--grayc4);
+  text-align: center;
+  display: block;
+}
+@media screen and (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+}

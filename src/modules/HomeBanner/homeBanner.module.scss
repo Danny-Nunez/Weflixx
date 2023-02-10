@@ -1,0 +1,16 @@
+.banner {
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 450px;
+  min-height: 200px;
+  background-color: var(--dark33);
+  @media screen and (max-width: 1023.98px) {
+    height: 40vw;
+  }
+  @media screen and (max-width: 767.98px) {
+    height: 54vw;
+  }
+}

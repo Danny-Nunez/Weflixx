@@ -1,0 +1,32 @@
+.meta {
+  --gap-x: 32px;
+  --gap-y: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-y) var(--gap-x);
+  overflow: hidden;
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+  }
+  li:last-child::after {
+    display: none;
+  }
+  li::after {
+    content: "";
+    position: absolute;
+    right: calc(var(--gap-x) * -1);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 100rem;
+    background-color: var(--purple);
+  }
+}
+.areas {
+  gap: 8px;
+  display: flex;
+}

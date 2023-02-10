@@ -1,0 +1,128 @@
+:root {
+  --dark: #080f28;
+  --purple: #995aff;
+  --dark33: #333;
+  --grayc4: #c4c1ea;
+  --gradient-purple: linear-gradient(270deg, #c042ff, #8a3cff);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #080f28;
+  color: white;
+  font-size: 1.6rem;
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+    border-radius: 50px;
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  &::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(-45deg, #6a5af9, #d66efd);
+    border-radius: 50px;
+  }
+}
+.searchBox-large {
+  max-width: 600px !important;
+  height: 46px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-gradient {
+  color: transparent;
+  background-clip: text;
+}
+.header-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.history-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 16px;
+}
+.menu-hidden {
+  @media screen and (max-width: 767.98px) {
+    display: none !important;
+  }
+}
+.heading {
+  font-size: 2.4rem;
+}
+.wrapper {
+  max-width: 584px;
+  margin: 0 auto;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  outline: 0;
+  width: 94%;
+  background: var(--dark);
+  max-width: 620px;
+  padding: 20px;
+  z-index: 200;
+}
+.modal-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+.button-gradient-purple {
+  color: white;
+  padding: 10px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  background-image: var(--gradient-purple);
+}
+.section-empty {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  span {
+    font-weight: 600;
+    font-size: 1.75rem;
+    color: white;
+  }
+}

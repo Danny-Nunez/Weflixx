@@ -1,0 +1,53 @@
+.aside {
+  max-width: 240px;
+  width: 100%;
+  @media screen and (max-width: 767.98px) {
+    max-width: 100%;
+  }
+}
+.username {
+  font-size: 1.6rem;
+}
+.email {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.avatar {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+.links {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.link {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logout {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+}

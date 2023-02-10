@@ -1,0 +1,34 @@
+.thumbnail {
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  width: 100%;
+  object-fit: cover;
+  background-color: var(--dark33);
+  border: 1px solid gray !important;
+}
+.title {
+  color: white;
+  margin: 4px 0;
+  line-height: 1.4;
+  font-weight: 600;
+  font-size: 1.7rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  transition: all 0.25s linear;
+  &:hover {
+    color: var(--purple);
+  }
+}
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}

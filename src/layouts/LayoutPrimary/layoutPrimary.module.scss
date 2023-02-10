@@ -1,0 +1,13 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  main {
+    padding-top: 20px;
+    flex: 1;
+    @media screen and (max-width: 767.98px) {
+      padding-top: 10px;
+    }
+  }
+}

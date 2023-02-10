@@ -1,0 +1,41 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+.content {
+  padding-top: 40px;
+  display: flex;
+  gap: 24px;
+  @media screen and (max-width: 767.98px) {
+    flex-direction: column;
+  }
+}
+.main {
+  flex: 1;
+  padding: 0 20px 40px;
+  border-radius: 12px;
+}
+.sidebar {
+  width: 250px;
+  ul {
+    padding: 10px 0;
+    background-color: #210b47;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  a {
+    padding: 12px 20px;
+    display: block;
+    color: white;
+  }
+}
+.mainHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.mainInfo {
+  padding-bottom: 20px;
+}

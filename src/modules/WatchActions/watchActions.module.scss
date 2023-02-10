@@ -1,0 +1,22 @@
+.actions {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.action {
+  gap: 6px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.4rem;
+  @media screen and (max-width: 767.98px) {
+    padding: 6px 12px;
+  }
+}
+.share {
+  background-color: #4267b2;
+}

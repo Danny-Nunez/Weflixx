@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  padding-bottom: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-width: 1px;
+  margin-bottom: 7px;
+}
+.close {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+.username {
+  flex: 1;
+  font-weight: 600;
+}
+.emoji {
+  flex-shrink: 0;
+}

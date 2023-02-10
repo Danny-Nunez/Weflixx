@@ -1,0 +1,10 @@
+.button {
+  width: 48px;
+  height: 48px;
+  transform: rotate(90deg);
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  z-index: 20;
+}

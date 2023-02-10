@@ -1,0 +1,16 @@
+.input {
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px 14px;
+  background: hsla(0, 0%, 100%, 0.01);
+  border: 1px solid #656293;
+  color: #fff;
+  font-size: 1.6rem;
+  &:focus {
+    border: 1px solid #8a3cff;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

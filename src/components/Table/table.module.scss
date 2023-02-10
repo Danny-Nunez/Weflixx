@@ -1,0 +1,22 @@
+.table {
+  overflow-x: auto;
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  td,
+  th {
+    text-align: left;
+    padding: 20px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  thead {
+    background-color: #210b47;
+  }
+  tbody tr {
+    background-color: rgb(40, 15, 76);
+  }
+}

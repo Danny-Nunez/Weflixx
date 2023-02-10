@@ -1,0 +1,105 @@
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media screen and (max-width: 767.98px) {
+    height: 60px;
+  }
+}
+.left {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+}
+.logo {
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.menu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  transition: all 0.25s linear;
+  @media screen and (max-width: 767.98px) {
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: var(--dark);
+    z-index: 40;
+  }
+}
+.link {
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  transition: all 0.2s linear;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.6rem;
+  &:hover {
+    color: var(--purple);
+  }
+}
+.searchBox {
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px 14px;
+}
+.signIn {
+  color: white;
+  flex-shrink: 0;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: var(--purple);
+  @media screen and (max-width: 767.98px) {
+    padding: 6px 14px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 5px;
+  }
+}
+.avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--dark33);
+  border: 2px solid hsla(0, 0%, 100%, 0.12);
+  img {
+    width: 37px;
+    height: 37px;
+    object-fit: cover;
+  }
+}
+.mobileAction {
+  display: flex;
+  gap: 0 14px;
+  align-items: center;
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+.buttonOpenMenu,
+.buttonCloseMenu {
+  background-color: transparent;
+  color: white;
+  border: none;
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+.buttonCloseMenu {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}

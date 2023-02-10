@@ -1,0 +1,73 @@
+.comment {
+  display: flex;
+  gap: 16px;
+  margin: 8px 0;
+}
+.avatar {
+  flex-shrink: 0;
+  img {
+    object-fit: cover;
+    background-color: var(--dark33);
+    border-radius: 50%;
+  }
+}
+.content {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px 18px;
+  border-radius: 10px;
+  position: relative;
+}
+.username {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.description {
+  margin-top: 8px;
+}
+.actions {
+  margin-top: 4px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 500;
+  @media screen and (max-width: 767.98px) {
+    font-size: 1.4rem;
+  }
+}
+.reactions {
+  position: absolute;
+  bottom: -10px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  background-color: rgba(30 41 59);
+  padding: 2px 4px;
+  border-radius: 20px;
+  gap: 1px;
+  cursor: pointer;
+  span {
+    font-size: 1.4rem;
+    display: inline-block;
+    margin-left: 4px;
+  }
+}
+.reaction {
+  width: 16px;
+  height: 16px;
+}
+.editInput {
+  width: 100%;
+  padding: 6px 12px;
+}
+.edit {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
+.delete {
+  color: #df0c0c;
+  background-color: transparent;
+  border: none;
+}

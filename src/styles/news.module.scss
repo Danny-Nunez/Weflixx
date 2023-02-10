@@ -1,0 +1,34 @@
+.article {
+  margin: 0 auto;
+  max-width: 1000px;
+  img {
+    margin: 14px 0;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    background-color: var(--dark33);
+  }
+  p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  a {
+    color: var(--purple);
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  p:has(> a) {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: var(--purple);
+  }
+}
+.createTime {
+  font-weight: 600;
+  display: block;
+  margin: 16px 0 10px;
+  color: #e1dff4;
+}

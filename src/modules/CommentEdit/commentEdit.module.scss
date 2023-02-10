@@ -1,0 +1,30 @@
+.textarea {
+  width: 100%;
+  padding: 6px 12px;
+  border-radius: 4px;
+  min-width: 400px;
+  @media screen and (max-width: 767.98px) {
+    min-width: unset;
+  }
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-end;
+}
+.action {
+  border: none;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin-top: 4px;
+}
+.cancel {
+  background-color: #e5525e;
+}
+.submit {
+  background-color: var(--purple);
+}

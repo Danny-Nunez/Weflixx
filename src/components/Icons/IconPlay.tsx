@@ -1,0 +1,22 @@
+interface IconPlayProps extends React.SVGProps<SVGSVGElement> {}
+
+const IconPlay = ({ ...props }: IconPlayProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      width={22}
+      height={22}
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+};
+
+export default IconPlay;

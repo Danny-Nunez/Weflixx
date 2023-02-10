@@ -1,0 +1,21 @@
+export const PATH = {
+  home: "/",
+  watch: "/watch",
+  search: "/search",
+  detail: "/detail",
+  profile: "/profile",
+  star: "/star",
+  follow: "/follow",
+  explore: "/explore",
+  news: "/news",
+  pageNotFound: "/404",
+  discovery: "/discovery",
+  category: "/category",
+  history: "/history",
+  signIn: "/sign-in",
+  signUp: "/sign-up",
+  changePassword: "/change-password",
+  userManage: "/manage/user",
+  resetPassword: "reset-password",
+  projectGithub: "https://github.com/lamhoang1256/netfilm"
+};

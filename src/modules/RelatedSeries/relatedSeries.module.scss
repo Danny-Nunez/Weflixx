@@ -1,0 +1,37 @@
+.relatedHeading {
+  font-weight: 600;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.relatedList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.relatedMovie {
+  display: flex;
+  gap: 10px;
+  &:hover img {
+    filter: brightness(0.6);
+  }
+  &:hover a {
+    color: var(--purple);
+  }
+}
+.relatedThumb {
+  background: var(--dark33);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.relatedThumb img {
+  transition: all 0.25s linear;
+}
+.relatedInfo {
+  flex: 1;
+  a {
+    color: white;
+    font-weight: 500;
+    transition: all 0.2s linear;
+  }
+}

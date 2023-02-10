@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 18px;
+  scroll-padding: 48px;
+  padding: 20px 0 14px;
+  -webkit-overflow-scrolling: touch;
+  @media screen and (min-width: 1024px) {
+    &::-webkit-scrollbar {
+      height: 6px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  }
+}
