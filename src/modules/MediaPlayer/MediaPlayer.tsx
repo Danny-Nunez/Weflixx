@@ -5,7 +5,6 @@ import { IQuality, ISubtitle } from "types";
 import dynamic from "next/dynamic";
 import { HlsPlayerProps } from "react-hls-player";
 import { Player } from "react-tuby";
-import "react-tuby/css/main.css";
 
 interface MediaPlayerProps extends Partial<HlsPlayerProps> {
   subtitles: ISubtitle[];

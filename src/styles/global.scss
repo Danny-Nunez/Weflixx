@@ -1,8 +1,9 @@
 :root {
   --dark: #080f28;
   --purple: #995aff;
-  --dark33: #333;
-  --grayc4: #c4c1ea;
+  --gray33: #333;
+  --purplec4: #c4c1ea;
+  --dark43: #434b5a;
   --gradient-purple: linear-gradient(270deg, #c042ff, #8a3cff);
 }
 html {
@@ -125,4 +126,52 @@ body {
     font-size: 1.75rem;
     color: white;
   }
+}
+/// together styles
+.tuby-controls-hidden .tuby-controls .tuby-seek .tuby-seek-bar {
+  display: none;
+}
+.together-add {
+  display: flex;
+  gap: 30px 60px;
+  @media screen and (max-width: 1023.98px) {
+    flex-direction: column;
+  }
+  form {
+    flex: 1;
+  }
+}
+.together-heading {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+.together-information {
+  width: 100%;
+  max-width: 500px;
+}
+.together-thumbnail {
+  border-radius: 10px;
+}
+.together-title {
+  margin: 20px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.together-desc {
+  margin: 20px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.together-submit {
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid #8a3cff;
+  background-color: var(--purple);
 }

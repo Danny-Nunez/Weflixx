@@ -1,4 +1,5 @@
 .movieCard {
+  cursor: pointer;
   max-width: 190px;
   transition: all 0.25s linear;
   &:hover .movieCardPoster {

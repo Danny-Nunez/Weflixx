@@ -6,4 +6,5 @@ export * from "./category.type";
 export * from "./news.type";
 export * from "./video.type";
 export * from "./star.type";
+export * from "./room.type";
 export * from "./user.type";

@@ -15,6 +15,7 @@ import "styles/reset.scss";
 import "swiper/css";
 import "swiper/css/navigation";
 import "nprogress/nprogress.css";
+import "react-tuby/css/main.css";
 
 Modal.setAppElement("#__next");
 Modal.defaultStyles = {
