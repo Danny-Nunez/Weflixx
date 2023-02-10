@@ -87,4 +87,5 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
+
 export default HomePage;
