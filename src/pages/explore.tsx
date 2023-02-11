@@ -54,7 +54,7 @@ const ExplorePage = ({ filters }: ExplorePageProps) => {
   }, [setSize]);
   return (
     <LayoutPrimary>
-      <Meta title="Explore - NetFilm" />
+      <Meta title="Explore - WeFlixx" />
       <div className="container">
         <MovieList>
           <Dropdown placeholder="All type">

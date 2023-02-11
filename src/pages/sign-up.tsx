@@ -57,11 +57,11 @@ const SignUpPage = () => {
   };
   return (
     <CheckLoggedIn>
-      <Meta title="Sign Up - NetFilm" />
+      <Meta title="Sign Up - WeFlixx" />
       <div className={styles.section}>
         <div className={styles.container}>
           <form onSubmit={handleSignUp}>
-            <h1 className={styles.heading}>Welcome to Netfilm</h1>
+            <h1 className={styles.heading}>Welcome to WeFlixx</h1>
             <span className={styles.label}>SignUp to continue</span>
             <div className={styles.main}>
               <FormGroup>

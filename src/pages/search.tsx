@@ -15,7 +15,7 @@ interface SearchPageProps {
 const SearchPage = ({ results, keyword }: SearchPageProps) => {
   return (
     <LayoutPrimary>
-      <Meta title={`${keyword || "Search"} - NetFilm`} />
+      <Meta title={`${keyword || "Search"} - WeFlixx`} />
       <div className="container">
         <SearchBox className="searchBox-large" />
         <MovieList heading={keyword && `Keyword: ${keyword}`}>

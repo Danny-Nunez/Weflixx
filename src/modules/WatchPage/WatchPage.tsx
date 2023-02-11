@@ -84,7 +84,7 @@ const WatchMain = ({ data }: WatchMainProps) => {
   if (!mounted) {
     return (
       <Meta
-        title={`${data.name} - NetFilm`}
+        title={`${data.name} - WeFlixx`}
         description={data.introduction}
         image={resizeImageLoklok(data.coverHorizontalUrl, 800, 418)}
       />
@@ -94,7 +94,7 @@ const WatchMain = ({ data }: WatchMainProps) => {
     <LayoutPrimary>
       <div className="container">
         <Meta
-          title={`${data.name} - NetFilm`}
+          title={`${data.name} - WeFlixx`}
           description={data.introduction}
           image={resizeImageLoklok(data.coverHorizontalUrl, 800, 418)}
         />

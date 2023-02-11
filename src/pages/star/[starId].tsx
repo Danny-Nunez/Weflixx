@@ -17,7 +17,7 @@ interface StarInfoPageProps {
 const StarInfoPage = ({ data }: StarInfoPageProps) => {
   return (
     <LayoutPrimary>
-      <Meta title={`${data.localName} - NetFilm`} />
+      <Meta title={`${data.localName} - WeFlixx`} />
       <div className="container">
         <div className={styles.header}>
           <div className={styles.avatar}>
