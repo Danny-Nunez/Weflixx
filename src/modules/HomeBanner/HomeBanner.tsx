@@ -7,9 +7,19 @@ import { PATH } from "constants/path";
 import { Image } from "components/Image";
 import { IMAGE_SIZE, resizeImageLoklok } from "constants/global";
 
+
 interface HomeBannerProps {
   banners: IBanner[];
 }
+
+
+
+// useEffect(() => {
+//   if (!data) return;
+//   let historyLS: IHistoryView[] = JSON.parse(localStorage.getItem(LocalStorage.history) || "[]");
+//   if (historyLS.length >= 30) {
+//     historyLS = historyLS.slice(0, 30);
+//   }
 
 const stylesSwiper = {
   borderRadius: "8px",
@@ -20,10 +30,11 @@ const stylesSwiper = {
 const HomeBanner = ({ banners }: HomeBannerProps) => {
   return (
     <section>
+     
       <Swiper loop navigation={true} modules={[Navigation]} style={stylesSwiper}>
         {banners.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <WrapLink href={`${PATH.watch}/${banner.jumpType}/${banner.id}`}>
+            <WrapLink href={``}>
               <Image
                 alt={banner.title}
                 className={styles.banner}

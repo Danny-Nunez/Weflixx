@@ -9,7 +9,7 @@ interface MetaProps {
 }
 
 const Meta = ({
-  title = "NetFilm - Watch HD movies online for free - Highest Rated Movies Recommendation",
+  title = "WeFlixx - Watch HD movies online with friends for free - Highest Rated Movies Recommendation",
   description = "Popular episodes updated quickly, American hot series Tension, comedy, thriller,Newest hottest dramasall in NetFilm",
   image = `/image-seo.png`
 }: MetaProps) => {
@@ -22,10 +22,10 @@ const Meta = ({
       <meta name="robots" content="index,follow" />
       <meta name="description" content={description} key="description" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" key="viewport" />
-      <meta name="copyright" content="lamhoang1256" key="copyright" />
+      <meta name="copyright" content="DannyN" key="copyright" />
       <meta
         name="keywords"
-        content="netfilm, net-film, netfilm.vercel.app, lamhoang1256"
+        content="WeFlixx, We-Flixx, WeFlixx.com, Danny Nunez"
         key="keywords"
       />
       <link rel="icon" href="/favicon.png" key="favicon" />

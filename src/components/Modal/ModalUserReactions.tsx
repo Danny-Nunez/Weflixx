@@ -21,7 +21,7 @@ const ModalUserReactions = ({ isShow, toggleModal, reactions }: ModalUserReactio
     >
       <div className="p-5">
         <div className={styles.header}>
-          <h4>People is reaction to this info</h4>
+          <h4>People's reaction to this info</h4>
           <button className={styles.close} onClick={toggleModal}>
             <IconClose className="!w-5 !h-5" />
           </button>

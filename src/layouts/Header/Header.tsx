@@ -10,8 +10,20 @@ import styles from "./header.module.scss";
 
 const links = [
   {
+    path: PATH.news,
+    display: "News"
+  },
+  {
     path: PATH.together,
-    display: "Watch Together"
+    display: "Rooms"
+  },
+  {
+    path: PATH.history,
+    display: "History"
+  },
+  {
+    path: PATH.explore,
+    display: "Explore"
   }
 ];
 
