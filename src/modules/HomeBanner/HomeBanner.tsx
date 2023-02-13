@@ -21,7 +21,7 @@ const stylesSwiper = {
 };
 
 const HomeBanner = ({ banners }: HomeBannerProps) => {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([] as any[]);
 
   useEffect(() => {
     fetch('https://api.themoviedb.org/3/movie/popular?api_key=80d38ce4b783b1c72330ca00da8dd2d3&language=en-US&page=1')
@@ -32,19 +32,19 @@ const HomeBanner = ({ banners }: HomeBannerProps) => {
   return (
     <section>
      
-      <Swiper loop navigation={true} autoplay={true} modules={[Navigation, Autoplay]}  style={stylesSwiper} autoplay={{delay:7000, pauseOnMouseEnter:true, disableOnInteraction:false }} speed={1000}>
+      <Swiper loop navigation={true} modules={[Navigation, Autoplay]}  style={stylesSwiper} autoplay={{delay:7000, pauseOnMouseEnter:true, disableOnInteraction:false }} speed={1000}>
       
       {movies.map((movie) => (
-          <SwiperSlide key={movie.id}>
+          <SwiperSlide key={movie} >
             
             
             <div className={styles.movietitle}>{movie.title}<div className={styles.movierating}>{movie.vote_average}</div><div className={styles.movieoverview}>{movie.overview}</div></div>
             
-               <img src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
+               <Image src={`https://www.themoviedb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} />
               
 
            
-          </SwiperSlide>
+        </SwiperSlide>
         ))}
 
  
