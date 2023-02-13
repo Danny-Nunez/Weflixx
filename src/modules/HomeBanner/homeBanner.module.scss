@@ -61,15 +61,16 @@
   .movieoverview {
     overflow: hidden;
     width: 290px;
-    
+    display: none;
     margin-top: 8px;
     font-size: 10px;
   }
   .movietitle {
     font-size: 22px;
     width: 300px;
+    height: 130px;
   }
   .movierating {
-  display: none;
+  
   }
 }
