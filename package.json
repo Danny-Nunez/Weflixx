@@ -33,6 +33,7 @@
     "react-hot-toast": "^2.4.0",
     "react-modal": "^3.16.1",
     "react-redux": "^8.0.5",
+    "react-slideshow-image": "^4.2.0",
     "react-tuby": "^0.1.24",
     "sass": "^1.56.1",
     "swagger-ui-react": "^4.12.0",

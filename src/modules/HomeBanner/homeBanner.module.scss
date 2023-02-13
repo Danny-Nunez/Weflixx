@@ -1,3 +1,45 @@
+.movietitle {
+  position: fixed;
+  top: 5%;
+  padding: 10px;
+  width: 500px;
+  font-weight: 900;
+  margin-left: 10px;
+  font-size: 33px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.349);
+  text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+               -1px -1px 0 #000;
+               margin-bottom: 10px;
+
+}
+.movierating {
+  margin-top: 10px;
+  font-size: 24px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: none;
+  position: fixed;
+  font-weight: 900;
+  color: #000;
+  background-image: url("./imdblogo.svg");
+  width: 135px;
+  height: 33px;
+  padding-left:85px;
+  padding-top: 2px;
+  background-color: #ffc600;
+  border-radius: 5px;
+}
+.movieoverview {
+  text-shadow: none;
+  font-size: 12px;
+  font-weight: 200;
+  margin-top: 55px;
+  
+}
+
 .banner {
   border-radius: 8px;
   overflow: hidden;
@@ -12,5 +54,22 @@
   }
   @media screen and (max-width: 767.98px) {
     height: 54vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .movieoverview {
+    overflow: hidden;
+    width: 290px;
+    
+    margin-top: 8px;
+    font-size: 10px;
+  }
+  .movietitle {
+    font-size: 22px;
+    width: 300px;
+  }
+  .movierating {
+  display: none;
   }
 }
