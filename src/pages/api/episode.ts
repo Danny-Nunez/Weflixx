@@ -26,22 +26,19 @@ const getEpisodeApi = async (req: NextApiRequest, res: NextApiResponse) => {
   if (!currentEpisode) currentEpisode = episodeVo[0];
   const { definitionList, subtitlingList } = currentEpisode;
   const getEpisode = async (code: string) => {
-    const params = {
-      category,
-      contentId: id,
-      episodeId: currentEpisode?.id,
-      definition: code
-    };
-    return await axiosLoklok.get(PATH_API.media, { params });
+    const requestBody = [
+      { category: category, contentId: id, episodeId: currentEpisode?.id, definition: code }
+    ];
+    return await axiosLoklok.post(PATH_API.media, JSON.stringify(requestBody));
   };
   let totalDuration = 0;
   const qualities = await Promise.all(
     definitionList.map(async (definition) => {
       const { data } = await getEpisode(definition.code);
-      totalDuration = data.totalDuration;
+      totalDuration = data[0].totalDuration;
       return {
         quality: Number(definition.description.replace(/[\p\P]/g, "")),
-        url: data.mediaUrl.replace(/^http:\/\//i, "https://")
+        url: data[0].mediaUrl.replace(/^http:\/\//i, "https://")
       };
     })
   );
