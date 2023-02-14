@@ -49,7 +49,8 @@ const HomePage = ({ banners }: HomePageProps) => {
       <div className={styles.homebannercontainer}>
         <HomeBanner banners={banners} />
         </div>
-        <div style={{ marginTop: "40px" }}>
+        <div style={{ marginTop: "30px", marginLeft: "10px" }}>
+          <h2>Trending Now</h2>
           {(movies.length as number) > 0 ? (
             <MovieList>
               {movies.flat().map((result: ICategoryResult) => (
