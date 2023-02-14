@@ -60,6 +60,9 @@ const SignUpPage = () => {
       <Meta title="Sign Up - WeFlixx" />
       <div className={styles.section}>
         <div className={styles.container}>
+        <WrapLink href="https://www.weflixx.com/">
+          <button className={styles.homebutton}><i className={styles.gghome}></i></button>
+          </WrapLink>
           <form onSubmit={handleSignUp}>
             <h1 className={styles.heading}>Welcome to WeFlixx</h1>
             <span className={styles.label}>SignUp to continue</span>

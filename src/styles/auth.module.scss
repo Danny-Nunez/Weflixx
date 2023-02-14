@@ -1,3 +1,74 @@
+.gghome {
+  background:
+      linear-gradient(to left,
+          currentColor 5px,transparent 0)
+          no-repeat 0 bottom/4px 2px,
+      linear-gradient(to left,
+          currentColor 5px,transparent 0)
+          no-repeat right bottom/4px 2px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 18px;
+  height: 14px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -2px
+}
+.gghome::after,
+.gghome::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute
+}
+.gghome::before {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-left-radius: 4px;
+  transform: rotate(45deg);
+  top: -5px;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  left: 0
+}
+.gghome::after {
+  width: 8px;
+  height: 10px;
+  border: 2px solid;
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  left: 3px;
+  bottom: 0
+}
+.homebutton {
+  background-image: linear-gradient(-45deg, #ff0000, #d66efd);
+  color: #fff;
+  border-radius: 50%;
+  padding-top: 19px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  
+}
+.homebutton:hover {
+  background-image: linear-gradient(-45deg, #ff0000, #7e00f5);
+  
+}
 .section {
   min-height: 100vh;
   padding: 14px;
@@ -90,7 +161,7 @@
   padding-top: 20px;
   text-align: center;
   a {
-    color: blue;
+    color: rgb(255, 0, 0);
   }
 }
 .forgot {

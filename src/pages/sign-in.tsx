@@ -39,9 +39,12 @@ const SignInPage = () => {
       <Meta title="Sign In - WeFlixx" />
       <div className={styles.section}>
         <div className={styles.container}>
+        <WrapLink href="https://www.weflixx.com/">
+          <button className={styles.homebutton}><i className={styles.gghome}></i></button>
+          </WrapLink>
           <form onSubmit={handleSignIn}>
             <h1 className={styles.heading}>Welcome to WeFlixx</h1>
-            <span className={styles.label}>SignIn to continue</span>
+            <span className={styles.label}>Login to continue</span>
             <div className={styles.main}>
               <FormGroup>
                 <Label htmlFor="email">Email</Label>
@@ -52,7 +55,7 @@ const SignInPage = () => {
                 <InputPassword name="password" placeholder="Password" onChange={onChange} />
               </FormGroup>
               <button type="submit" className={classNames(styles.button, styles.buttonLarge)}>
-                Sign In
+                Login
               </button>
             </div>
             <div className={styles.alreadyAccount}>
