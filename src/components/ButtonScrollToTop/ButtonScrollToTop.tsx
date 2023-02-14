@@ -60,7 +60,7 @@ const ButtonScrollToTop = () => {
         <g fill="none" fillRule="evenodd">
           <g transform="matrix(-1 0 0 1 44 2)">
             <use fill="#000" filter="url(#a)" xlinkHref="#b" />
-            <use fill="#995aff" stroke="#995aff" xlinkHref="#b" />
+            <use fill="#ea0000" stroke="#ea0000" xlinkHref="#b" />
           </g>
           <path d="M32 14v16H16V14z" />
           <path
