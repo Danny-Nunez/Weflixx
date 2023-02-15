@@ -46,7 +46,7 @@ const ResetPasswordPage = () => {
                 />
               </FormGroup>
               <button type="submit" className={classNames(styles.button, styles.buttonLarge)}>
-                Sign In
+                Send Reset Link
               </button>
             </div>
             <div className={styles.alreadyAccount}>

@@ -59,23 +59,23 @@ const HomeBanner = ({ banners }: HomeBannerProps) => {
             </WrapLink>
             
             
-            {/* <button onClick={openModal} className={styles.movietrailerbutton}>
+            <button onClick={openModal} className={styles.movietrailerbutton}>
         TRAILER
         {modal ? (
           <section className={styles.modal__bg}>
             <div className={styles.modal__align}>
-              <div className={styles.modal__content} modal={modal}>
+              <div className={styles.modal__content} >
                 <IoCloseOutline
                   className={styles.modal__close}
                   arial-label="Close modal"
-                  onClick={setModal}
+                  
                 />
                 <div className={styles.modal__video_align}>
                   {videoLoading ? (
                     <div className={styles.modal__spinner}>
                       <BiLoaderAlt
                         className={styles.modal__spinner_style}
-                        fadeIn="none"
+                        
                       />
                     </div>
                   ) : null}
@@ -89,14 +89,14 @@ const HomeBanner = ({ banners }: HomeBannerProps) => {
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
+                    >
                     </iframe>
                 </div>
               </div>
             </div>
           </section>
         ) : null}
-      </button> */}
+      </button>
 
 
             
