@@ -55,7 +55,7 @@ const HomeBanner = ({ banners }: HomeBannerProps) => {
             <div className={styles.movierating}>{movie.vote_average}<span className={styles.moviespan}>&#9733;</span></div>
             <div className={styles.movieoverview}>{movie.overview}</div>
             <WrapLink href={`/search?keyword=${movie.title}`}>
-            <button className={styles.moviewatchbutton}>WATCH NOW</button>
+            <button className={styles.moviewatchbutton}>WATCH NOW<i className={styles.ggplaybutton}></i></button>
             </WrapLink>
             
             

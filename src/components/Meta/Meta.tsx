@@ -9,8 +9,8 @@ interface MetaProps {
 }
 
 const Meta = ({
-  title = "WeFlixx - Watch HD movies online with friends for free - Highest Rated Movies Recommendation",
-  description = "Popular episodes updated quickly, American hot series Tension, comedy, thriller,Newest hottest dramasall in NetFilm",
+  title = "WeFlixx - Watch HD movies online with friends for free - Here you can watch thousands of movies and TV shows for free.",
+  description = "With our easy-to-use search feature, you can quickly find the perfect movie or show for your mood. So sit back, relax, and enjoy the show!",
   image = `/image-seo.png`
 }: MetaProps) => {
   const router = useRouter();

@@ -7,6 +7,7 @@ import { useRef } from "react";
 import { useAppSelector } from "store/global-store";
 import classNames from "utils/classNames";
 import styles from "./header.module.scss";
+import { Image } from "components/Image";
 
 const links = [
   {
@@ -38,7 +39,10 @@ const Header = () => {
       <div className="container">
         <nav className={styles.navbar}>
           <div className={styles.left}>
-            <WrapLink className={styles.logo}>WeFlixx</WrapLink>
+          
+            <WrapLink className={styles.logo}>
+            <Image className={styles.logowf} src={`https://dannyfullstack.dev/weflixxxlogo.png`}  />
+              </WrapLink>
             <ul className={classNames(styles.menu, "menu-hidden")} ref={menuRef}>
               {links.map((link) => (
                 <li key={link.path}>
