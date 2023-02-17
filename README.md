@@ -28,7 +28,14 @@ So what are you waiting for? Sign up now and start streaming!
 ## Watch history
 <p>Watch history allows users easy access to rewatch there favorite movies or tvshows.</p>
 <img width="1044" alt="Screen Shot 2023-02-17 at 8 06 25 AM" src="https://user-images.githubusercontent.com/114783191/219661854-e6c7ec6c-533e-458d-a67e-527d5b61e783.png">
+<p></p>
+
+## Rooms
+<p>Rooms allows users to create a room select a movie or tv show and invite friends by sending them a link. The creator will control the movie or tvshow and everyone in the room will see it on their screen. The room will also host a live chat so users can talk while the movie or show is playing. The room automatically gets deleted after 5 hours.</p>
 <img width="1360" alt="Screen Shot 2023-02-17 at 8 11 04 AM" src="https://user-images.githubusercontent.com/114783191/219661865-0559b573-f05c-4441-8344-bebe7db6dbf8.png">
+<img width="1341" alt="Screen Shot 2023-02-17 at 9 31 05 AM" src="https://user-images.githubusercontent.com/114783191/219682978-241e6845-ae08-4536-853c-f5755dbafefa.png">
+
+## Profile
 <img width="1329" alt="Screen Shot 2023-02-17 at 8 10 23 AM" src="https://user-images.githubusercontent.com/114783191/219661878-4eea91f0-de58-408b-b600-db6fbed60e78.png">
 
 
