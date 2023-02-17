@@ -36,6 +36,7 @@ So what are you waiting for? Sign up now and start streaming!
 <img width="1341" alt="Screen Shot 2023-02-17 at 9 31 05 AM" src="https://user-images.githubusercontent.com/114783191/219682978-241e6845-ae08-4536-853c-f5755dbafefa.png">
 
 ## Profile
+<p>Your profile allows users to set a profile image keep track of their followed movies and manage personal account info.</p>
 <img width="1329" alt="Screen Shot 2023-02-17 at 8 10 23 AM" src="https://user-images.githubusercontent.com/114783191/219661878-4eea91f0-de58-408b-b600-db6fbed60e78.png">
 
 
