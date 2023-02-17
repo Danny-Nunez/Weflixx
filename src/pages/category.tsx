@@ -48,7 +48,7 @@ const CategoryPage = ({ filters }: CategoryPageProps) => {
   }, [setSize]);
   return (
     <LayoutPrimary>
-      <Meta title="Category - NetFilm" />
+      <Meta title="Category - WeFlixx" />
       <div className="container">
         <h3>{nameCategory}</h3>
         {(movies?.flat()?.length as number) > 0 ? (

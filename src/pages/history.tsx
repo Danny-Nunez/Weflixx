@@ -28,7 +28,7 @@ const HistoryPage = () => {
   }, []);
   return (
     <LayoutPrimary>
-      <Meta title="History - NetFilm" />
+      <Meta title="History - WeFlixx" />
       <div className="container">
         {loading ? (
           <MovieListSkeleton count={6} />
