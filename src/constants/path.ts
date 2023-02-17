@@ -19,5 +19,5 @@ export const PATH = {
   changePassword: "/change-password",
   userManage: "/manage/user",
   resetPassword: "reset-password",
-  projectGithub: "https://github.com/Danny-Nunez/weflixxv2"
+  projectGithub: "https://github.com/Danny-Nunez/Weflixx"
 };
