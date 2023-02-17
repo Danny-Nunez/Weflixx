@@ -8,7 +8,8 @@ A website to watch HD movies online with friends for free - Here you can watch t
 
 ## Preview
 
-<img width="926" alt="Screen Shot 2023-02-16 at 9 35 18 PM" src="https://user-images.githubusercontent.com/114783191/219535181-9f4e6a3a-5ea5-4496-aaa9-7f86365f4d24.png">
+<img width="1313" alt="Screen Shot 2023-02-17 at 8 17 24 AM" src="https://user-images.githubusercontent.com/114783191/219663021-e941faba-3074-4f11-a9ea-78aeac1e5d4a.png">
+thubusercontent.com/114783191/219661878-4eea91f0-de58-408b-b600-db6fbed60e78.png">
 <img width="1044" alt="Screen Shot 2023-02-17 at 8 06 00 AM" src="https://user-images.githubusercontent.com/114783191/219661843-8a56cb45-ecc6-445b-b87c-a14454a804f3.png">
 <img width="1041" alt="Screen Shot 2023-02-17 at 8 06 48 AM" src="https://user-images.githubusercontent.com/114783191/219661847-62109dad-04b1-447c-b813-8070777cf191.png">
 <img width="1044" alt="Screen Shot 2023-02-17 at 8 06 25 AM" src="https://user-images.githubusercontent.com/114783191/219661854-e6c7ec6c-533e-458d-a67e-527d5b61e783.png">
