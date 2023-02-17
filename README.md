@@ -1,6 +1,9 @@
-# WeFlixx
+# ![weflixxxlogo](https://user-images.githubusercontent.com/114783191/219663549-95404fea-1949-4130-bc0d-48b8601dcec9.png)
 
-A website to watch HD movies online with friends for free - Here you can watch thousands of movies and TV shows built using NextJS.
+
+WeFlixx is a website to watch HD movies online with friends for free - Here, you can watch all your favorite movies and TV shows totally free with our super fast server. Plus, you can create private rooms to watch movies with friends while you chat live. We also provide live info from TMDB so you can stay up-to-date on the latest releases and with our user profiles, you can track your watch history and review your favorite movies. 
+
+So what are you waiting for? Sign up now and start streaming!
 
 ## Overview
 
