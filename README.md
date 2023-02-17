@@ -11,10 +11,22 @@ So what are you waiting for? Sign up now and start streaming!
 - Official website 👉 https://weflixx.com
 
 ## Preview
-
+<p>Detailed home page with tmdb popular api showcasing trending movies with react swiper scroller. Movie covers are from loklok api.</p> 
 <img width="1313" alt="Screen Shot 2023-02-17 at 8 17 24 AM" src="https://user-images.githubusercontent.com/114783191/219663021-e941faba-3074-4f11-a9ea-78aeac1e5d4a.png">
+<p></p>
+
+## News
+<p>News api pull info directly from LokLok api and showcases rich details about movies and tvshows.</p>
 <img width="1044" alt="Screen Shot 2023-02-17 at 8 06 00 AM" src="https://user-images.githubusercontent.com/114783191/219661843-8a56cb45-ecc6-445b-b87c-a14454a804f3.png">
+<p></p>
+
+## Explore
+<p>Explore allows users to seacrh with multiple filter options</p>
 <img width="1041" alt="Screen Shot 2023-02-17 at 8 06 48 AM" src="https://user-images.githubusercontent.com/114783191/219661847-62109dad-04b1-447c-b813-8070777cf191.png">
+<p></p>
+
+## Watch history
+<p>Watch history allows users easy access to rewatch there favorite movies or tvshows.</p>
 <img width="1044" alt="Screen Shot 2023-02-17 at 8 06 25 AM" src="https://user-images.githubusercontent.com/114783191/219661854-e6c7ec6c-533e-458d-a67e-527d5b61e783.png">
 <img width="1360" alt="Screen Shot 2023-02-17 at 8 11 04 AM" src="https://user-images.githubusercontent.com/114783191/219661865-0559b573-f05c-4441-8344-bebe7db6dbf8.png">
 <img width="1329" alt="Screen Shot 2023-02-17 at 8 10 23 AM" src="https://user-images.githubusercontent.com/114783191/219661878-4eea91f0-de58-408b-b600-db6fbed60e78.png">
