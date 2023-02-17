@@ -47,7 +47,7 @@ So what are you waiting for? Sign up now and start streaming!
 
 ## Main technology used
 
-- NextJS, Typescript
+- NextJS, Typescript 
 - TMDB api
 - Sass module
 - Firebase
@@ -59,6 +59,8 @@ So what are you waiting for? Sign up now and start streaming!
 - Cheerio (Crawl data from website Loklok)
 - react-hls-player (Media player video m3u8)
 - Other: query-string, uuidv4, ...
+
+![NextJS](https://img.shields.io/badge/-NextJs-000000?logo=nextdotjs) ![Typescript](https://img.shields.io/badge/-Typerscript-000000?logo=typescript) ![Sass](https://img.shields.io/badge/-Sass-black?logo=sass) ![Redux](https://img.shields.io/badge/-Redux-black?logo=redux) ![NodeJS](https://img.shields.io/badge/-NodeJS-black?logo=nodedotjs) ![Axios](https://img.shields.io/badge/-Axios-black?logo=axios) ![Vercel](https://img.shields.io/badge/-Vercel-black?logo=vercel) ![Firebase](https://img.shields.io/badge/-Firebase-black?logo=firebase) ![IMDB](https://img.shields.io/badge/-IMDB-black?logo=imdb)
 
 ## Features
 
