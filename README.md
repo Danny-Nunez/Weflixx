@@ -21,7 +21,7 @@ So what are you waiting for? Sign up now and start streaming!
 <p></p>
 
 ## Explore
-<p>Explore allows users to seacrh with multiple filter options</p>
+<p>Explore allows users to search with multiple filter options</p>
 <img width="1041" alt="Screen Shot 2023-02-17 at 8 06 48 AM" src="https://user-images.githubusercontent.com/114783191/219661847-62109dad-04b1-447c-b813-8070777cf191.png">
 <p></p>
 
