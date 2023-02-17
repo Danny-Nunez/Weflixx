@@ -4,11 +4,16 @@ A website to watch HD movies online with friends for free - Here you can watch t
 
 ## Overview
 
-- Official website: https://weflixx.com
+- Official website 👉 https://weflixx.com
 
 ## Preview
 
 <img width="926" alt="Screen Shot 2023-02-16 at 9 35 18 PM" src="https://user-images.githubusercontent.com/114783191/219535181-9f4e6a3a-5ea5-4496-aaa9-7f86365f4d24.png">
+<img width="1044" alt="Screen Shot 2023-02-17 at 8 06 00 AM" src="https://user-images.githubusercontent.com/114783191/219661843-8a56cb45-ecc6-445b-b87c-a14454a804f3.png">
+<img width="1041" alt="Screen Shot 2023-02-17 at 8 06 48 AM" src="https://user-images.githubusercontent.com/114783191/219661847-62109dad-04b1-447c-b813-8070777cf191.png">
+<img width="1044" alt="Screen Shot 2023-02-17 at 8 06 25 AM" src="https://user-images.githubusercontent.com/114783191/219661854-e6c7ec6c-533e-458d-a67e-527d5b61e783.png">
+<img width="1360" alt="Screen Shot 2023-02-17 at 8 11 04 AM" src="https://user-images.githubusercontent.com/114783191/219661865-0559b573-f05c-4441-8344-bebe7db6dbf8.png">
+<img width="1329" alt="Screen Shot 2023-02-17 at 8 10 23 AM" src="https://user-images.githubusercontent.com/114783191/219661878-4eea91f0-de58-408b-b600-db6fbed60e78.png">
 
 
 ## Resources
@@ -19,6 +24,7 @@ A website to watch HD movies online with friends for free - Here you can watch t
 ## Main technology used
 
 - NextJS, Typescript
+- TMDB api
 - Sass module
 - Firebase
 - Redux, Redux toolkit (State management)
@@ -42,6 +48,8 @@ A website to watch HD movies online with friends for free - Here you can watch t
 - Save history you watch, follow movie you like
 - View information of the actors in the movie
 - Read latest breaking movie news
+- Create a room to watch movie with your friends and control the movie while everyone watches
+- Live chat when watching movies with friends
 - Optimize SEO and Responsive on many devices
 
 ## Environment Variables
