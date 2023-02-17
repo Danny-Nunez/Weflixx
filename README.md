@@ -26,7 +26,7 @@ So what are you waiting for? Sign up now and start streaming!
 <p></p>
 
 ## Watch history
-<p>Watch history allows users easy access to rewatch there favorite movies or tvshows.</p>
+<p>Watch history allows users easy access to rewatch their favorite movies or tvshows.</p>
 <img width="1044" alt="Screen Shot 2023-02-17 at 8 06 25 AM" src="https://user-images.githubusercontent.com/114783191/219661854-e6c7ec6c-533e-458d-a67e-527d5b61e783.png">
 <p></p>
 
