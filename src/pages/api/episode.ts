@@ -1,18 +1,15 @@
-import { IMovieDetailsLoklok, ISubtitle } from "types";
 import axiosLoklok from "configs/axiosLoklok";
 import { PATH_API } from "configs/path.api";
 import { STATUS } from "constants/status";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { IMovieDetailsLoklok, ISubtitle } from "types";
 import catchAsync from "utils/catch-async";
 import { ApiError, responseError, responseSuccess } from "utils/response";
 
 const getEpisodeApi = async (req: NextApiRequest, res: NextApiResponse) => {
+  const { method } = req;
   let { id, category = 0, episode = 0 } = req.query;
   episode = Number(episode);
-  if (req.method !== "GET") {
-    const error = new ApiError(STATUS.METHOD_NOT_ALLOWED, "Method not allowed");
-    return responseError(error, res);
-  }
   const { data } = await axiosLoklok.get(PATH_API.detail, {
     params: { id, category, episode }
   });
@@ -26,19 +23,26 @@ const getEpisodeApi = async (req: NextApiRequest, res: NextApiResponse) => {
   if (!currentEpisode) currentEpisode = episodeVo[0];
   const { definitionList, subtitlingList } = currentEpisode;
   const getEpisode = async (code: string) => {
-    const requestBody = [
-      { category: category, contentId: id, episodeId: currentEpisode?.id, definition: code }
-    ];
-    return await axiosLoklok.post(PATH_API.media, JSON.stringify(requestBody));
+    return await axiosLoklok.get(
+      "https://ga-mobile-api.loklok.tv/cms/web/pc/movieDrama/getPlayInfo",
+      {
+        params: {
+          category: category,
+          contentId: id,
+          episodeId: currentEpisode?.id,
+          definition: code
+        }
+      }
+    );
   };
   let totalDuration = 0;
   const qualities = await Promise.all(
     definitionList.map(async (definition) => {
       const { data } = await getEpisode(definition.code);
-      totalDuration = data[0].totalDuration;
+      totalDuration = data?.totalDuration;
       return {
         quality: Number(definition.description.replace(/[\p\P]/g, "")),
-        url: data[0].mediaUrl.replace(/^http:\/\//i, "https://")
+        url: data.mediaUrl.replace(/^http:\/\//i, "https://")
       };
     })
   );
