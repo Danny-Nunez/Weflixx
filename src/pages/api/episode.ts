@@ -1,13 +1,18 @@
 import axiosLoklok from "configs/axiosLoklok";
 import { PATH_API } from "configs/path.api";
 import { STATUS } from "constants/status";
+import appMiddleware from "middleware/app.middleware";
+import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { IMovieDetailsLoklok, ISubtitle } from "types";
+import { IMovieDetailsLoklok } from "types";
 import catchAsync from "utils/catch-async";
+import { sortSubtitles } from "utils/helper";
 import { ApiError, responseError, responseSuccess } from "utils/response";
 
 const getEpisodeApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
+  methodMiddleware(method as string, ["GET"], res);
+  appMiddleware(req, res);
   let { id, category = 0, episode = 0 } = req.query;
   episode = Number(episode);
   const { data } = await axiosLoklok.get(PATH_API.detail, {
@@ -23,43 +28,27 @@ const getEpisodeApi = async (req: NextApiRequest, res: NextApiResponse) => {
   if (!currentEpisode) currentEpisode = episodeVo[0];
   const { definitionList, subtitlingList } = currentEpisode;
   const getEpisode = async (code: string) => {
-    return await axiosLoklok.get(
-      "https://ga-mobile-api.loklok.tv/cms/web/pc/movieDrama/getPlayInfo",
-      {
-        params: {
-          category: category,
-          contentId: id,
-          episodeId: currentEpisode?.id,
-          definition: code
-        }
+    return await axiosLoklok.get(PATH_API.media, {
+      params: {
+        category: category,
+        contentId: id,
+        episodeId: currentEpisode?.id,
+        definition: code
       }
-    );
+    });
   };
   let totalDuration = 0;
   const qualities = await Promise.all(
     definitionList.map(async (definition) => {
-      const { data } = await getEpisode(definition.code);
+      const { data: episodeData } = await getEpisode(definition.code);
       totalDuration = data?.totalDuration;
       return {
         quality: Number(definition.description.replace(/[\p\P]/g, "")),
-        url: data.mediaUrl.replace(/^http:\/\//i, "https://")
+        url: episodeData.mediaUrl.replace(/^http:\/\//i, "https://")
       };
     })
   );
-  const subtitles = subtitlingList
-    .map((sub) => ({
-      lang: sub.languageAbbr,
-      language: `${sub.language}${sub.translateType ? " (Auto)" : ""}`,
-      url: `${PATH_API.srtToVtt}${sub.subtitlingUrl}`
-    }))
-    .reduce((acc, curr) => {
-      if (curr.lang === "en") return [curr, ...acc];
-      return [...acc, curr];
-    }, [] as ISubtitle[])
-    .reduce((acc, curr) => {
-      if (curr.lang === "vi") return [curr, ...acc];
-      return [...acc, curr];
-    }, [] as ISubtitle[]);
+  const subtitles = sortSubtitles(subtitlingList);
   const hasNextEpisode = movieDetails.episodeVo.length > 1;
   const responseData: any = {
     ...movieDetails,
