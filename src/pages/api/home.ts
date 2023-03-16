@@ -1,18 +1,17 @@
-import { IResponseHomeLoklok } from "types";
 import axiosLoklok from "configs/axiosLoklok";
 import { PATH_API } from "configs/path.api";
-import { STATUS } from "constants/status";
+import appMiddleware from "middleware/app.middleware";
+import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { IResponseHomeLoklok } from "types";
 import catchAsync from "utils/catch-async";
-import { ApiError, responseError, responseSuccess } from "utils/response";
+import { responseSuccess } from "utils/response";
 
 const HomePageApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
+  methodMiddleware(method as string, ["GET"], res);
+  appMiddleware(req, res);
   const { page = 0 } = query;
-  if (method !== "GET") {
-    const error = new ApiError(STATUS.METHOD_NOT_ALLOWED, "Method not allowed");
-    return responseError(error, res);
-  }
   const {
     page: currentPage,
     recommendItems,
@@ -22,7 +21,7 @@ const HomePageApi = async (req: NextApiRequest, res: NextApiResponse) => {
     (section) => section.homeSectionType !== "BLOCK_GROUP" && section.homeSectionName !== ""
   );
   const homeSections = validHomeSections.map((section) => ({
-    homeSectionName: section.homeSectionName.replace("Loklok", "WeFlixx"),
+    homeSectionName: section.homeSectionName.replace("Loklok", "Netfilm"),
     homeSectionId: section.homeSectionId,
     homeMovies: section.recommendContentVOList.map((movie) => ({
       id: movie.id,

@@ -1,17 +1,16 @@
-import { STATUS } from "constants/status";
-import type { NextApiRequest, NextApiResponse } from "next";
 import axiosLoklok from "configs/axiosLoklok";
-import catchAsync from "utils/catch-async";
-import { ApiError, responseError, responseSuccess } from "utils/response";
 import { PATH_API } from "configs/path.api";
+import appMiddleware from "middleware/app.middleware";
+import methodMiddleware from "middleware/method.middleware";
+import type { NextApiRequest, NextApiResponse } from "next";
+import catchAsync from "utils/catch-async";
+import { responseSuccess } from "utils/response";
 
 const getSuggestApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
+  methodMiddleware(method as string, ["GET"], res);
+  appMiddleware(req, res);
   const { keyword, size = 10 } = query;
-  if (method !== "GET") {
-    const error = new ApiError(STATUS.METHOD_NOT_ALLOWED, "Method not allowed");
-    return responseError(error, res);
-  }
   const { data } = await axiosLoklok.post(PATH_API.searchSuggest, {
     searchKeyWord: keyword,
     size

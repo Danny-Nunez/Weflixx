@@ -9,7 +9,7 @@ export const PATH_API = {
   searchWithCategory: "/search/v1/search",
   genres: "/search/list",
   searchSuggest: "/search/searchLenovo",
-  media: "/media/bathGetplayInfo",
+  media: "/media/previewInfo",
   loklok: "https://loklok.com",
   srtToVtt: "https://convert-srt-to-vtt.vercel.app/?url="
 };

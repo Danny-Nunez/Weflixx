@@ -1,18 +1,17 @@
-import { IBanner } from "types";
 import axios from "axios";
 import * as cheerio from "cheerio";
 import { PATH_API } from "configs/path.api";
-import { STATUS } from "constants/status";
+import appMiddleware from "middleware/app.middleware";
+import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { IBanner } from "types";
 import catchAsync from "utils/catch-async";
-import { ApiError, responseError, responseSuccess } from "utils/response";
+import { responseSuccess } from "utils/response";
 
 const BannerApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
-  if (method !== "GET") {
-    const error = new ApiError(STATUS.METHOD_NOT_ALLOWED, "Method not allowed");
-    return responseError(error, res);
-  }
+  methodMiddleware(method as string, ["GET"], res);
+  appMiddleware(req, res);
   const banners = await getBanners();
   const response = {
     message: "Get home banners successfully!",

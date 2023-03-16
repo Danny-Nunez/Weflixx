@@ -1,17 +1,16 @@
-import { IMediaPreviewLoklok } from "types";
 import axiosLoklok from "configs/axiosLoklok";
-import { STATUS } from "constants/status";
+import appMiddleware from "middleware/app.middleware";
+import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
+import { IMediaPreviewLoklok } from "types";
 import catchAsync from "utils/catch-async";
-import { ApiError, responseError, responseSuccess } from "utils/response";
+import { responseSuccess } from "utils/response";
 
 const discoveryApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
+  methodMiddleware(method as string, ["GET"], res);
+  appMiddleware(req, res);
   const { page = 0 } = query;
-  if (method !== "GET") {
-    const error = new ApiError(STATUS.METHOD_NOT_ALLOWED, "Method not allowed");
-    return responseError(error, res);
-  }
   const { data } = await axiosLoklok.get(`/recommendPool/getVideoFromRecommondPool`, {
     params: { page }
   });
@@ -26,6 +25,7 @@ const discoveryApi = async (req: NextApiRequest, res: NextApiResponse) => {
   });
   const request = await axiosLoklok.post(`/media/bathGetplayInfo`, payloadGetMedia);
   const videos = data.map((item: IMediaPreviewLoklok, index: number) => {
+    console.log("request?.data[index]: ", request?.data[index]);
     return {
       category: item.category,
       coverHorizontalUrl: item.coverHorizontalUrl,
@@ -35,7 +35,7 @@ const discoveryApi = async (req: NextApiRequest, res: NextApiResponse) => {
       name: item.name,
       refList: item.refList.slice(0, 1),
       upInfo: item.upInfo,
-      mediaInfoUrl: request?.data[index]
+      mediaInfoUrl: process.env.PROXY_LOKLOK + request?.data[index].mediaUrl
     };
   });
   const response = {

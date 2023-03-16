@@ -1,17 +1,16 @@
 import axiosLoklokSub from "configs/axiosLoklokSub";
 import { PATH_API } from "configs/path.api";
-import { STATUS } from "constants/status";
+import appMiddleware from "middleware/app.middleware";
+import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import catchAsync from "utils/catch-async";
-import { ApiError, responseError, responseSuccess } from "utils/response";
+import { responseSuccess } from "utils/response";
 
 const NewsApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
+  methodMiddleware(method as string, ["GET"], res);
+  appMiddleware(req, res);
   const { page = 0, size = 12 } = query;
-  if (method !== "GET") {
-    const error = new ApiError(STATUS.METHOD_NOT_ALLOWED, "Method not allowed");
-    return responseError(error, res);
-  }
   const { data } = await axiosLoklokSub(PATH_API.news, { params: { page, size } });
   const response = {
     message: "Get news successfully!",
