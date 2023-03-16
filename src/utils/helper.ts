@@ -1,3 +1,6 @@
+import { PATH_API } from "configs/path.api";
+import { ISubtitle, ISubtitlingLoklok } from "types";
+
 export const checkTimeAgo = (timeCreated: number) => {
   let periods: { [key: string]: number } = {
     year: 365 * 30 * 24 * 60 * 60 * 1000,
@@ -34,4 +37,25 @@ export const formatTimeDuration = (totalDuration: number) => {
     .map((v) => (v < 10 ? "0" + v : v))
     .filter((v, i) => v !== "00" || i > 0)
     .join(":");
+};
+
+export const removeHttp = (url: string) => {
+  return url.replace(/^https?:\/\//, "");
+};
+
+export const sortSubtitles = (subtitles: ISubtitlingLoklok[]) => {
+  return subtitles
+    .map((sub) => ({
+      lang: sub.languageAbbr,
+      language: `${sub.language}${sub.translateType ? " (Auto)" : ""}`,
+      url: `${PATH_API.srtToVtt}${sub.subtitlingUrl}`
+    }))
+    .reduce((acc, curr) => {
+      if (curr.lang === "vi") return [curr, ...acc];
+      return [...acc, curr];
+    }, [] as ISubtitle[])
+    .reduce((acc, curr) => {
+      if (curr.lang === "en") return [curr, ...acc];
+      return [...acc, curr];
+    }, [] as ISubtitle[]);
 };
