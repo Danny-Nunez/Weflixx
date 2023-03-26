@@ -18,7 +18,7 @@ const ApiDoc = ({ spec }: InferGetStaticPropsType<typeof getStaticProps>) => {
   }, []);
   return (
     <>
-      <Meta title="WeFlixx Api" description="A api WeFlixx from LokLok app" />
+      <Meta title="WeFlixx Api" description="WeFlixx API from LokLok app" />
       <SwaggerUI spec={spec} />
     </>
   );
