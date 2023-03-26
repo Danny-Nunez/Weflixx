@@ -15,7 +15,7 @@ const ModalUserReactions = ({ isShow, toggleModal, reactions }: ModalUserReactio
     <Modal
       isOpen={isShow}
       onRequestClose={toggleModal}
-      contentLabel="Bảng cấp độ"
+      contentLabel="Level table"
       className="modal"
       overlayClassName="modal-overlay"
     >
