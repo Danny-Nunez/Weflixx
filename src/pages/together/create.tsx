@@ -68,7 +68,7 @@ const WatchTogetherCreate = () => {
   return (
     <ProtectedRoute>
       <LayoutPrimary>
-        <Meta title="Watch together create - NetFilm" />
+        <Meta title="Watch together create - WeFlixx" />
         <div className="container">
           {isModeAdd ? (
             <div className="together-add">

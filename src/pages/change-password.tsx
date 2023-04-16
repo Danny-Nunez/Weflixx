@@ -46,7 +46,7 @@ const ChangePasswordPage = () => {
 
   return (
     <ProtectedRoute>
-      <Meta title="Password - NetFilm" />
+      <Meta title="Password - WeFlixx" />
       <LayoutPrimary>
         <div className="container">
           <section className={styles.section}>

@@ -11,7 +11,7 @@ const NewsDetailsApi = async (req: NextApiRequest, res: NextApiResponse) => {
   methodMiddleware(method as string, ["GET"], res);
   const { id = 0 } = query;
   const { data } = await axiosLoklokSub(PATH_API.newsDetail, { params: { id } });
-  const content = data.content.replace(/LOKLOK/g, "Netfilm");
+  const content = data.content.replace(/LOKLOK/g, "WeFlixx");
   const response = {
     message: "Get news details successfully!",
     data: { ...data, content }

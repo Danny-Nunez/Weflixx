@@ -21,7 +21,7 @@ const HomePageApi = async (req: NextApiRequest, res: NextApiResponse) => {
     (section) => section.homeSectionType !== "BLOCK_GROUP" && section.homeSectionName !== ""
   );
   const homeSections = validHomeSections.map((section) => ({
-    homeSectionName: section.homeSectionName.replace("Loklok", "Netfilm"),
+    homeSectionName: section.homeSectionName.replace("Loklok", "WeFlixx"),
     homeSectionId: section.homeSectionId,
     homeMovies: section.recommendContentVOList.map((movie) => ({
       id: movie.id,
