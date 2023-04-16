@@ -57,14 +57,11 @@ const SignUpPage = () => {
   };
   return (
     <CheckLoggedIn>
-      <Meta title="Sign Up - WeFlixx" />
+      <Meta title="Sign Up - NetFilm" />
       <div className={styles.section}>
         <div className={styles.container}>
-        <WrapLink href="https://www.weflixx.com/">
-          <button className={styles.homebutton}><i className={styles.gghome}></i></button>
-          </WrapLink>
           <form onSubmit={handleSignUp}>
-            <h1 className={styles.heading}>Welcome to WeFlixx</h1>
+            <h1 className={styles.heading}>Welcome to Netfilm</h1>
             <span className={styles.label}>SignUp to continue</span>
             <div className={styles.main}>
               <FormGroup>

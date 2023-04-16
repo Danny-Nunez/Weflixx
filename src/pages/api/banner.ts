@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as cheerio from "cheerio";
 import { PATH_API } from "configs/path.api";
-import appMiddleware from "middleware/app.middleware";
+
 import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { IBanner } from "types";
@@ -11,7 +11,7 @@ import { responseSuccess } from "utils/response";
 const BannerApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
   methodMiddleware(method as string, ["GET"], res);
-  appMiddleware(req, res);
+
   const banners = await getBanners();
   const response = {
     message: "Get home banners successfully!",

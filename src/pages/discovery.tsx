@@ -34,7 +34,7 @@ const DiscoveryPage = ({ initialVideos }: DiscoveryPageProps) => {
   }, [setSize]);
   return (
     <LayoutPrimary>
-      <Meta title="Discovery - WeFlixx" />
+      <Meta title="Discovery - NetFilm" />
       <div className="container">
         <div className="wrapper">
           {initialVideos.map((video) => (

@@ -1,5 +1,5 @@
 import axiosLoklok from "configs/axiosLoklok";
-import appMiddleware from "middleware/app.middleware";
+
 import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { IMediaPreviewLoklok } from "types";
@@ -9,7 +9,7 @@ import { responseSuccess } from "utils/response";
 const discoveryApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
   methodMiddleware(method as string, ["GET"], res);
-  appMiddleware(req, res);
+
   const { page = 0 } = query;
   const { data } = await axiosLoklok.get(`/recommendPool/getVideoFromRecommondPool`, {
     params: { page }

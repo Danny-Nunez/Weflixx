@@ -25,7 +25,7 @@ const NewsDetailsPage = ({ news }: NewsDetailsPageProps) => {
   }, []);
   return (
     <LayoutPrimary>
-      <Meta title={`${news.title} - Weflixx`} />
+      <Meta title={`${news.title} - NetFilm`} />
       <div className="container">
         <article className={styles.article}>
           <h1 dangerouslySetInnerHTML={{ __html: news.title }} />

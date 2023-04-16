@@ -18,7 +18,7 @@ const ApiDoc = ({ spec }: InferGetStaticPropsType<typeof getStaticProps>) => {
   }, []);
   return (
     <>
-      <Meta title="WeFlixx Api" description="WeFlixx API from LokLok app" />
+      <Meta title="NetFilm Api" description="A api NetFilm from LokLok app" />
       <SwaggerUI spec={spec} />
     </>
   );
@@ -31,9 +31,9 @@ export const getStaticProps: GetStaticProps = async () => {
       openapi: "3.0.0",
       servers: [{ url: `${server}/api` }, { url: `${process.env.NEXT_PUBLIC_LOCALHOST}/api` }],
       info: {
-        title: "WeFlixx Api",
+        title: "NetFilm Api",
         version: "1.0.0",
-        description: "A api WeFlixx from LokLok app"
+        description: "A api NetFilm from LokLok app"
       }
     }
   });

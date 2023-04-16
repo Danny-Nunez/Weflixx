@@ -1,7 +1,7 @@
 import axiosLoklok from "configs/axiosLoklok";
 import { PATH_API } from "configs/path.api";
 import { STATUS } from "constants/status";
-import appMiddleware from "middleware/app.middleware";
+
 import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { IEpisodeVo, ILikeMovieLoklok } from "types";
@@ -11,7 +11,7 @@ import { ApiError, responseError, responseSuccess } from "utils/response";
 const getMovieDetailsPageApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
   methodMiddleware(method as string, ["GET"], res);
-  appMiddleware(req, res);
+
   const { data } = await axiosLoklok.get(PATH_API.detail, {
     params: query
   });

@@ -1,6 +1,6 @@
 import axiosLoklok from "configs/axiosLoklok";
 import { PATH_API } from "configs/path.api";
-import appMiddleware from "middleware/app.middleware";
+
 import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import catchAsync from "utils/catch-async";
@@ -9,7 +9,7 @@ import { responseSuccess } from "utils/response";
 const getSuggestApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
   methodMiddleware(method as string, ["GET"], res);
-  appMiddleware(req, res);
+
   const { keyword, size = 10 } = query;
   const { data } = await axiosLoklok.post(PATH_API.searchSuggest, {
     searchKeyWord: keyword,

@@ -9,7 +9,7 @@ const FollowPage = () => {
   const { follows } = useAppSelector((state) => state.follow);
   return (
     <LayoutPrimary>
-      <Meta title="Follow - WeFlixx" />
+      <Meta title="Follow - NetFilm" />
       <div className="container">
         {follows.length > 0 && (
           <MovieList>

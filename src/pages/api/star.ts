@@ -1,6 +1,6 @@
 import axiosLoklok from "configs/axiosLoklok";
 import { PATH_API } from "configs/path.api";
-import appMiddleware from "middleware/app.middleware";
+
 import methodMiddleware from "middleware/method.middleware";
 import type { NextApiRequest, NextApiResponse } from "next";
 import catchAsync from "utils/catch-async";
@@ -10,7 +10,7 @@ const StarInfoApi = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method, query } = req;
   const { starId = 18 } = query;
   methodMiddleware(method as string, ["GET"], res);
-  appMiddleware(req, res);
+
   const { data } = await axiosLoklok(PATH_API.star, { params: { starId } });
   const response = {
     message: "Get star info successfully!",

@@ -33,7 +33,7 @@ const ProfilePage = () => {
   };
   return (
     <ProtectedRoute>
-      <Meta title="Profile - WeFlixx" />
+      <Meta title="Profile - NetFilm" />
       <LayoutPrimary>
         <div className="container">
           <section className={styles.section}>

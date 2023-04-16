@@ -7,7 +7,7 @@ import classNames from "utils/classNames";
 const PageNotFound = () => {
   return (
     <div className={styles.page}>
-      <Meta title="Page Not Found - WeFlixx" />
+      <Meta title="Page Not Found - NetFilm" />
       <h1 className={classNames("text-gradient", styles.heading)}>404</h1>
       <h2 className={styles.title}>Something is not right</h2>
       <p className={styles.description}>We can not find the page you are looking for.</p>

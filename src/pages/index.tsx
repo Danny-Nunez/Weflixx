@@ -1,77 +1,54 @@
+import { IBanner, IHomeSection } from "types";
 import axiosClient from "configs/axiosClient";
 import { REVALIDATE_TIME } from "constants/global";
 import LayoutPrimary from "layouts/LayoutPrimary";
 import CheckInView from "modules/CheckInView";
 import HomeBanner from "modules/HomeBanner";
-import MovieCard from "modules/MovieCard";
-import MovieList from "modules/MovieList";
+import HomeSection from "modules/HomeSection";
 import { MovieListSkeleton } from "modules/MovieSkeleton";
 import { GetStaticProps } from "next";
-import queryString from "query-string";
 import { useCallback } from "react";
 import useSWRInfinite from "swr/infinite";
-import { IBanner, ICategoryResult, IHomeSection } from "types";
-import styles from "../styles/swipershell.module.scss";
-import React from 'react';
 
 interface HomePageProps {
   banners: IBanner[];
+  initialHomeSections: IHomeSection[];
 }
 
-const HomePage = ({ banners }: HomePageProps) => {
-  const getApiUrl = (index: number, prevData: ICategoryResult[] | null) => {
-    const isEmptyData = prevData?.length === 0;
-    if (isEmptyData) return null;
-    const sort = prevData?.[prevData.length - 1]?.sort || "";
-    const apiURL = `/api/category?${queryString.stringify({ area: "61", size: 12, sort })}`;
-    return apiURL;
-  };
+const HomePage = ({ banners, initialHomeSections }: HomePageProps) => {
+  const getApiUrl = (index: number) => `/api/home?page=${index + 1}`;
   const {
-    data: movies = [],
-    setSize,
-    error
+    data: homeSections,
+    error,
+    setSize
   } = useSWRInfinite(
     getApiUrl,
     async (apiURL: string) => {
       const { data } = await axiosClient.get(apiURL);
-      return data;
+      return data.homeSections;
     },
     { revalidateFirstPage: false, fallbackData: [] }
   );
-  const isReachingEnd = movies?.[movies.length - 1]?.length === 0;
-  const hasNextPage = movies && !error && !isReachingEnd;
+  const isReachingEnd = homeSections?.[homeSections.length - 1]?.length === 0;
+  const hasNextPage = homeSections && !error && !isReachingEnd;
   const handleLoadMore = useCallback(() => {
     setSize((prev) => prev + 1);
   }, [setSize]);
   return (
     <LayoutPrimary>
       <div className="container">
-      <div className={styles.homebannercontainer}>
         <HomeBanner banners={banners} />
-        </div>
-        <div style={{ marginTop: "30px", marginLeft: "10px" }}>
-          <h2>Trending Now</h2>
-          {(movies.length as number) > 0 ? (
-            <MovieList>
-              {movies.flat().map((result: ICategoryResult) => (
-                <MovieCard
-                  key={result.id}
-                  id={result.id}
-                  title={result.name}
-                  domainType={result.domainType}
-                  poster={result.coverVerticalUrl}
-                />
-              ))}
-            </MovieList>
-          ) : (
-            <MovieListSkeleton count={12} />
-          )}
-          {hasNextPage && (
-            <CheckInView onInView={handleLoadMore}>
-              <MovieListSkeleton />
-            </CheckInView>
-          )}
-        </div>
+        {initialHomeSections.map((homeSection) => (
+          <HomeSection key={homeSection.homeSectionId} homeSection={homeSection} />
+        ))}
+        {homeSections?.flat()?.map((homeSection: IHomeSection) => (
+          <HomeSection key={homeSection.homeSectionId} homeSection={homeSection} />
+        ))}
+        {hasNextPage && (
+          <CheckInView onInView={handleLoadMore}>
+            <MovieListSkeleton hasHeading />
+          </CheckInView>
+        )}
       </div>
     </LayoutPrimary>
   );
@@ -79,14 +56,18 @@ const HomePage = ({ banners }: HomePageProps) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
+    const { data: dataHome } = await axiosClient.get(`/api/home`);
     const { data: banners } = await axiosClient.get(`/api/banner`);
     return {
-      props: { banners },
+      props: {
+        banners,
+        initialHomeSections: dataHome.homeSections
+      },
       revalidate: REVALIDATE_TIME.success
     };
   } catch (error) {
     return {
-      props: { banners: [] },
+      props: { banners: [], initialHomeSections: [] },
       revalidate: REVALIDATE_TIME.fail
     };
   }

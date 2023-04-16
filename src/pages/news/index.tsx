@@ -35,7 +35,7 @@ const NewsPage = ({ initialNews }: NewsPageProps) => {
   }, [setSize]);
   return (
     <LayoutPrimary>
-      <Meta title="News - Weflixx" />
+      <Meta title="News - NetFilm" />
       <div className="container">
         <NewsList>
           {initialNews.map((item) => (

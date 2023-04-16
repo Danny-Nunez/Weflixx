@@ -30,7 +30,7 @@ const ResetPasswordPage = () => {
   };
   return (
     <CheckLoggedIn>
-      <Meta title="Sign In - WeFlixx" />
+      <Meta title="Sign In - NetFilm" />
       <div className={styles.section}>
         <div className={styles.container}>
           <form onSubmit={handleResetPassword}>
@@ -46,7 +46,7 @@ const ResetPasswordPage = () => {
                 />
               </FormGroup>
               <button type="submit" className={classNames(styles.button, styles.buttonLarge)}>
-                Send Reset Link
+                Sign In
               </button>
             </div>
             <div className={styles.alreadyAccount}>
