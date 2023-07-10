@@ -6,9 +6,6 @@ WeFlixx is a website to watch HD movies online with friends for free - Here, you
 
 So what are you waiting for? Sign up now and start streaming!
 
-## Overview
-
-- Official website 👉 https://weflixx.com
 
 ## Preview
 <p>Detailed home page with tmdb popular api showcasing trending movies with react swiper scroller. Movie covers are from loklok api.</p> 
