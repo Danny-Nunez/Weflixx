@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/114783191/219676457-1e972ab3-839f-4d70-9139-edddb4f95497.png">
+  Deprecated old code base
 </p>
 
 WeFlixx is a website to watch HD movies online with friends for free - Here, you can watch all your favorite movies and TV shows totally free with our super fast server. Plus, you can create private rooms to watch movies with friends while you chat live. We also provide live info from TMDB so you can stay up-to-date on the latest releases and with our user profiles, you can track your watch history and review your favorite movies. 
